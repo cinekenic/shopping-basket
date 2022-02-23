@@ -1,0 +1,27 @@
+<header>
+  <div class="navbar navbar-dark bg-info shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <i
+        routerLink="/"
+        style="font-size: 40px"
+        class="fa-solid fa-umbrella-beach umbrella-icon"
+      >
+      </i>
+
+      <strong>Umbrella</strong>
+
+      <div class="form-group">
+        <input type="text" class="form-control" />
+      </div>
+      <span class="fas fa-search search-icon"></span>
+    </div>
+    <button routerLink="cart" class="btn btn-primary">
+      <i class="fa-solid fa-basket-shopping"></i>
+      <div class="badge bg-danger">{{ totalItem }}</div>
+
+      <span *ngIf="grandTotal" class="badge badge-info"
+        >{{ grandTotal }} PLN</span
+      >
+    </button>
+  </div>
+</header>

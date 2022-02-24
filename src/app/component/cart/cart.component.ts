@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CartComponent implements OnInit {
   public products: any = [];
